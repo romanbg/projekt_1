@@ -1,0 +1,13 @@
+{% extends 'constconv/base.html' %}
+
+{% block content %}
+
+<h2> Załaduj plik typu CIF</h2>
+
+    <form action="{% url 'hydrogen-file' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Wyślij">
+    </form>
+
+{% endblock %}

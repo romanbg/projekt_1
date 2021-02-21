@@ -1,0 +1,21 @@
+{% extends 'constconv/base.html' %}
+
+{% block content %}
+
+<h3> Wpisz listę HKL oraz liste pozycji atomowych</h3>
+<p></p>
+<h4>Uwaga!!! Zarówno HKL jak i pozycje atomowe podawaj w postaci zagnieżdżonej listy.</h4>
+<p></p>
+<p>przykład: [[0,0,1][1,0,0]]</p>
+
+    <form action="{% url 'structure-factor' %}" method="post">
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" class="btn btn-primary" value="Oblicz czynnik struktury">
+        </div>
+    </form>
+
+    Czynnik struktury przyjmuje wartość: {{ result }}
+
+{% endblock %}

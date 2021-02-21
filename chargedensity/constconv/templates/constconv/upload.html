@@ -1,0 +1,17 @@
+{% extends 'constconv/base.html' %}
+
+{% block content %}
+
+<h2> Załaduj plik z więzami dla multipoli</h2>
+
+    <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <input type="submit" class="btn btn-primary" value="Załaduj plik">
+
+
+
+    </form>
+
+{% endblock %}

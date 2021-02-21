@@ -1,0 +1,16 @@
+{% extends 'constconv/base.html' %}
+
+{% block content %}
+
+<h2> Załaduj plik typu CIF</h2>
+
+    <form action="{% url 'cif-file' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Stałe sieciowe" name="stale_sieciowe">
+        <input type="submit" class="btn btn-primary" value="Układ i grupa" name="grupa_przestrzenna">
+        <input type="submit" class="btn btn-primary" value="Pozycje atomowe" name="pozycje_atomowe">
+        <input type="submit" class="btn btn-primary" value="Długość_fali" name="dlugosc_fali">
+    </form>
+
+{% endblock %}

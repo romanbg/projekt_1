@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</head>
+<body background="{{ STATIC_URL }}">
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <ul class="nav navbar-nav" >
+                <li><a class="navbar-link" href="{% url 'index' %}"><font color="red">Strona Główna</font></a></li>
+                <li><a class="navbar-link" href="{% url 'upload' %}">Konwersja więzów dla multipoli</a></li>
+                <li><a class="navbar-link" href="{% url 'cif-file' %}">Pliki CIF</a></li>
+                <li><a class="navbar-link" href="{% url 'hkl-file' %}">Pliki HKL</a></li>
+                <li><a href="{% url 'structure-factor' %}">Czynnik Struktury</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <h2> Aplikacja do pracy z plikami CIF / HKL oraz opisujących multipole</h2>
+
+        {% block content %}
+
+        {% endblock %}
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script src="{{ STATIC_URL }}js/app.js"></script>
+</body>
+</html>

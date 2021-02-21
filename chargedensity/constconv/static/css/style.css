@@ -1,0 +1,53 @@
+body {
+    background-color: grey;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.multipole {
+    float: left;
+    border: solid 2px;
+    height: 200px;
+    width: 280px;
+    text-color: white;
+    padding: 15px;
+}
+
+.navbar-link{
+    text:red;
+}
+
+.cif {
+    float: right;
+    border: solid 2px;
+    height: 200px;
+    width: 280px;
+    padding: 15px;
+}
+
+.hkl {
+    float: left;
+    border: solid 2px;
+    height: 200px;
+    width: 280px;
+    padding: 15px;
+}
+
+.structure {
+    float: right;
+    border: solid 2px;
+    height: 200px;
+    width: 280px;
+    padding: 15px;
+}
+
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+
+</head>
+
+<body>
+
+    <h1 class="title"> CONSTCONW </h1>
+
+    <div id="blok_1">
+
+        <div class="cif">
+            <a href="{% url 'cif-file' %}" title="Pliki CIF"><img src="{{ STATIC_URL }}molecule_2.jpeg"></a>
+            <h3> Eksploracja pliku CIF</h3>
+        </div>
+
+        <div class="multipole">
+            <a href="{% url 'upload' %}" title="Konwersja więzów dla multipoli"><img src="{{ STATIC_URL }}multipoles.gif"></a>
+            <h3>Konwersja więzów dla multipoli</h3>
+        </div>
+
+        <div class="hkl">
+            <a href="{% url 'hkl-file' %}" title="Pliki HKL"><img src="{{ STATIC_URL }}xray_frame.jpeg"></a>
+            <h3> wyswietlanie refleksów - plik HKL</h3>
+        </div>
+
+        <div class="structure">
+            <a href="{% url 'structure-factor' %}" title="Czynnik struktury"><img src="{{ STATIC_URL }}structure_factor_1.png"></a>
+            <h3> obliczanie czynnika struktury </h3>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+
+
+
